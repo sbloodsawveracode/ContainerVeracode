@@ -1,0 +1,3648 @@
+{
+  "vulnerabilities": {
+    "descriptor": {
+      "configuration": "",
+      "db": {
+        "built": "2023-03-07T08:14:34Z",
+        "checksum": "sha256:334d1ae9f5fd21f429e398475bfc5af70d25fe5b574a0e1f9946a19b910b7ffe",
+        "error": null,
+        "location": "/var/folders/2v/z_0jd7gn30qcym54rz_z2__m0000gq/T/veracode_cli_cache/5",
+        "schemaVersion": 5
+      },
+      "name": "grype",
+      "version": "[not provided]"
+    },
+    "distro": {
+      "idLike": null,
+      "name": "",
+      "version": ""
+    },
+    "matches": [
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:apache-software-foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache_software_foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:log4j:log4j:1.2.17:*:*:*:*:*:*:*"
+          ],
+          "language": "java",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/lib2/log4j-1.2.17.jar"
+            }
+          ],
+          "metadata": {
+            "archiveDigests": [
+              {
+                "algorithm": "sha1",
+                "value": "5af35056b4d257e4b64b9e8069c0746e8b08629f"
+              }
+            ],
+            "manifestName": "",
+            "pomArtifactID": "log4j",
+            "pomGroupID": "log4j",
+            "virtualPath": "lib/lib2/log4j-1.2.17.jar"
+          },
+          "metadataType": "JavaMetadata",
+          "name": "log4j",
+          "purl": "pkg:maven/log4j/log4j@1.2.17",
+          "type": "java-archive",
+          "upstreams": [],
+          "version": "1.2.17"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003e=1.2,\u003c=1.2.27 (unknown)"
+            },
+            "matcher": "java-matcher",
+            "searchedBy": {
+              "language": "java",
+              "namespace": "github:language:java"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 7.5,
+                  "exploitabilityScore": 10,
+                  "impactScore": 6.4
+                },
+                "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 9.8,
+                  "exploitabilityScore": 3.9,
+                  "impactScore": 5.9
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2019-17571",
+            "description": "Included in Log4j 1.2 is a SocketServer class that is vulnerable to deserialization of untrusted data which can be exploited to remotely execute arbitrary code when combined with a deserialization gadget when listening to untrusted network traffic for log data. This affects Log4j versions up to 1.2 up to 1.2.17.",
+            "id": "CVE-2019-17571",
+            "namespace": "nvd:cpe",
+            "severity": "Critical",
+            "urls": [
+              "https://lists.apache.org/thread.html/eea03d504b36e8f870e8321d908e1def1addda16adda04327fe7c125%40%3Cdev.logging.apache.org%3E",
+              "https://lists.apache.org/thread.html/8ab32b4c9f1826f20add7c40be08909de9f58a89dc1de9c09953f5ac@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/44491fb9cc19acc901f7cff34acb7376619f15638439416e3e14761c@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/277b4b5c2b0e06a825ccec565fa65bd671f35a4d58e3e2ec5d0618e1@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/6114ce566200d76e3cc45c521a62c2c5a4eac15738248f58a99f622c@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/479471e6debd608c837b9815b76eab24676657d4444fcfd5ef96d6e6@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/752ec92cd1e334a639e79bfbd689a4ec2c6579ec5bb41b53ffdf358d@%3Cdev.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/564f03b4e9511fcba29c68fc0299372dadbdb002718fa8edcc4325e4@%3Cjira.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r2756fd570b6709d55a61831ca028405bcb3e312175a60bc5d911c81f@%3Cjira.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r189aaeaad897f7d6b96f7c43a8ef2dfb9f6e9f8c1cc9ad182ce9b9ae@%3Cjira.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r3c575cabc7386e646fb12cb82b0b38ae5a6ade8a800f827107824495@%3Cjira.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/rf2567488cfc9212b42e34c6393cfa1c14e30e4838b98dda84d71041f@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/r8a1cfd4705258c106e488091fcec85f194c82f2bbde6bd151e201870@%3Cjira.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/rbdf18e39428b5c80fc35113470198b1fe53b287a76a46b0f8780b5fd@%3Cdev.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r944183c871594fe9a555b8519a7c945bbcf6714d72461aa6c929028f@%3Cissues.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r05755112a8c164abc1004bb44f198b1e3d8ca3d546a8f13ebd3aa05f@%3Cissues.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r3a85514a518f3080ab1fc2652cfe122c2ccf67cfb32356acb1b08fe8@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/rf1b434e11834a4449cd7addb69ed0aef0923112b5938182b363a968c@%3Cnotifications.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r356d57d6225f91fdc30f8b0a2bed229d1ece55e16e552878c5fa809a@%3Cissues.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rc628307962ae1b8cc2d21b8e4b7dd6d7755b2dd52fa56a151a27e4fd@%3Cissues.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r6aec6b8f70167fa325fb98b3b5c9ce0ffaed026e697b69b85ac24628@%3Cissues.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rc1eaed7f7d774d5d02f66e49baced31e04827a1293d61a70bd003ca7@%3Cdev.tika.apache.org%3E",
+              "https://security.netapp.com/advisory/ntap-20200110-0001/",
+              "https://lists.apache.org/thread.html/r681b4432d0605f327b68b9f8a42662993e699d04614de4851c35ffd1@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/ra38785cfc0e7f17f8e24bebf775dd032c033fadcaea29e5bc9fffc60@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/rdec0d8ac1f03e6905b0de2df1d5fcdb98b94556e4f6cccf7519fdb26@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/r746fbc3fc13aee292ae6851f7a5080f592fa3a67b983c6887cdb1fc5@%3Cdev.tika.apache.org%3E",
+              "https://lists.debian.org/debian-lts-announce/2020/01/msg00008.html",
+              "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00022.html",
+              "https://lists.apache.org/thread.html/rca24a281000fb681d7e26e5c031a21eb4b0593a7735f781b53dae4e2@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/r4b25538be50126194cc646836c718b1a4d8f71bd9c912af5b59134ad@%3Cdev.tika.apache.org%3E",
+              "https://lists.apache.org/thread.html/r8e3f7da12bf5750b0a02e69a78a61073a2ac950eed7451ce70a65177@%3Ccommits.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r48d5019bd42e0770f7e5351e420a63a41ff1f16924942442c6aff6a8@%3Ccommits.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rdf2a0d94c3b5b523aeff7741ae71347415276062811b687f30ea6573@%3Ccommits.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rc17d8491beee51607693019857e41e769795366b85be00aa2f4b3159@%3Cnotifications.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rd6254837403e8cbfc7018baa9be29705f3f06bd007c83708f9a97679@%3Cissues.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r107c8737db39ec9ec4f4e7147b249e29be79170b9ef4b80528105a2d@%3Cdev.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r7bcdc710857725c311b856c0b82cee6207178af5dcde1bd43d289826@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/rd5dbeee4808c0f2b9b51479b50de3cc6adb1072c332a200d9107f13e@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/raedd12dc24412b3780432bf202a2618a21a727788543e5337a458ead@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r2ff63f210842a3c5e42f03a35d8f3a345134d073c80a04077341c211@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r3d666e4e8905157f3c046d31398b04f2bfd4519e31f266de108c6919@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r61590890edcc64140e0c606954b29a063c3d08a2b41d447256d51a78@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r909b8e3a36913944d3b7bafe9635d4ca84f8f0e2cd146a1784f667c2@%3Cissues.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r4ac89cbecd9e298ae9fafb5afda6fa77ac75c78d1ac957837e066c4e@%3Cuser.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r2ce8d26154bea939536e6cf27ed02d3192bf5c5d04df885a80fe89b3@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r6236b5f8646d48af8b66d5050f288304016840788e508c883356fe0e@%3Clog4j-user.logging.apache.org%3E",
+              "https://lists.apache.org/thread.html/re8c21ed9dd218c217d242ffa90778428e446b082b5e1c29f567e8374@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r18f1c010b554a3a2d761e8ffffd8674fd4747bcbcf16c643d708318c@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/rb1b29aee737e1c37fe1d48528cb0febac4f5deed51f5412e6fdfe2bf@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r8d78a0fbb56d505461e29868d1026e98c402e6a568c13a6da67896a2@%3Cdev.jena.apache.org%3E",
+              "https://lists.apache.org/thread.html/r8890b8f18f1de821595792b58b968a89692a255bc20d86d395270740@%3Ccommits.druid.apache.org%3E",
+              "https://www.oracle.com/security-alerts/cpuapr2020.html",
+              "https://lists.apache.org/thread.html/rbc45eb0f53fd6242af3e666c2189464f848a851d408289840cecc6e3@%3Ccommits.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r48efc7cb5aeb4e1f67aaa06fb4b5479a5635d12f07d0b93fc2d08809@%3Ccommits.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rec34b1cccf907898e7cb36051ffac3ccf1ea89d0b261a2a3b3fb267f@%3Ccommits.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r696507338dd5f44efc23d98cafe30f217cf3ba78e77ed1324c7a5179@%3Cjira.kafka.apache.org%3E",
+              "https://www.debian.org/security/2020/dsa-4686",
+              "https://lists.apache.org/thread.html/rf9c19bcc2f7a98a880fa3e3456c003d331812b55836b34ef648063c9@%3Cjira.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r71e26f9c2d5826c6f95ad60f7d052d75e1e70b0d2dd853db6fc26d5f@%3Cjira.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r7f462c69d5ded4c0223e014d95a3496690423c5f6f05c09e2f2a407a@%3Cjira.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r7a1acc95373105169bd44df710c2f462cad31fb805364d2958a5ee03@%3Cjira.kafka.apache.org%3E",
+              "https://www.oracle.com/security-alerts/cpujul2020.html",
+              "https://lists.apache.org/thread.html/r1b103833cb5bc8466e24ff0ecc5e75b45a705334ab6a444e64e840a0@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r3784834e80df2f284577a5596340fb84346c91a2dea6a073e65e3397@%3Cissues.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r13d4b5c60ff63f3c4fab51d6ff266655be503b8a1884e2f2fab67c3a@%3Ccommon-issues.hadoop.apache.org%3E",
+              "https://lists.apache.org/thread.html/r6b45a2fcc8e98ac93a179183dbb7f340027bdb8e3ab393418076b153@%3Ccommon-issues.hadoop.apache.org%3E",
+              "https://lists.apache.org/thread.html/r8c6300245c0bcef095e9f07b48157e2c6471df0816db3408fcf1d748@%3Ccommon-issues.hadoop.apache.org%3E",
+              "https://lists.apache.org/thread.html/r1b7734dfdfd938640f2f5fb6f4231a267145c71ed60cc7faa1cbac07@%3Ccommon-issues.hadoop.apache.org%3E",
+              "https://lists.apache.org/thread.html/rbd19de368abf0764e4383ec44d527bc9870176f488a494f09a40500d@%3Ccommon-dev.hadoop.apache.org%3E",
+              "https://lists.apache.org/thread.html/rd7805c1bf9388968508c6c8f84588773216e560055ddcc813d19f347@%3Ccommon-issues.hadoop.apache.org%3E",
+              "https://lists.apache.org/thread.html/r26244f9f7d9a8a27a092eb0b2a0ca9395e88fcde8b5edaeca7ce569c@%3Ccommon-issues.hadoop.apache.org%3E",
+              "https://lists.apache.org/thread.html/r8c392ca48bb7e50754e4bc05865e9731b23d568d18a520fe3d8c1f75@%3Ccommon-issues.hadoop.apache.org%3E",
+              "https://lists.apache.org/thread.html/r9fb3238cfc3222f2392ca6517353aadae18f76866157318ac562e706@%3Ccommon-issues.hadoop.apache.org%3E",
+              "https://usn.ubuntu.com/4495-1/",
+              "https://lists.apache.org/thread.html/ra54fa49be3e773d99ccc9c2a422311cf77e3ecd3b8594ee93043a6b1@%3Cdev.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r9d0d03f2e7d9e13c68b530f81d02b0fec33133edcf27330d8089fcfb@%3Cissues.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r3cf50d05ce8cec8c09392624b7bae750e7643dae60ef2438641ee015@%3Cissues.zookeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rd0e44e8ef71eeaaa3cf3d1b8b41eb25894372e2995ec908ce7624d26@%3Ccommits.pulsar.apache.org%3E",
+              "https://lists.apache.org/thread.html/rda4849c6823dd3e83c7a356eb883180811d5c28359fe46865fd151c3@%3Cusers.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r5c084578b3e3b40bd903c9d9e525097421bcd88178e672f612102eb2@%3Cjira.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E",
+              "https://lists.apache.org/thread.html/rd3a9511eebab60e23f224841390a3f8cd5358cff605c5f7042171e47@%3Cdev.tinkerpop.apache.org%3E",
+              "https://lists.apache.org/thread.html/r8244fd0831db894d5e89911ded9c72196d395a90ae655414d23ed0dd@%3Cusers.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r3543ead2317dcd3306f69ee37b07dd383dbba6e2f47ff11eb55879ad@%3Cusers.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r3bf7b982dfa0779f8a71f843d2aa6b4184a53e6be7f149ee079387fd@%3Cdev.kafka.apache.org%3E",
+              "https://www.oracle.com/security-alerts/cpuApr2021.html",
+              "https://lists.apache.org/thread.html/r2721aba31a8562639c4b937150897e24f78f747cdbda8641c0f659fe@%3Cusers.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r9a9e3b42cd5d1c4536a14ef04f75048dec8e2740ac6a138ea912177f@%3Cpluto-dev.portals.apache.org%3E",
+              "https://lists.apache.org/thread.html/reaf6b996f74f12b4557bc221abe88f58270ac583942fa41293c61f94@%3Cpluto-scm.portals.apache.org%3E",
+              "https://lists.apache.org/thread.html/rf77f79699c8d7e430c14cf480f12ed1297e6e8cf2ed379a425941e80@%3Cpluto-dev.portals.apache.org%3E",
+              "https://lists.apache.org/thread.html/rd882ab6b642fe59cbbe94dc02bd197342058208f482e57b537940a4b@%3Cpluto-dev.portals.apache.org%3E",
+              "https://lists.apache.org/thread.html/r9dc2505651788ac668299774d9e7af4dc616be2f56fdc684d1170882@%3Cusers.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r52a5129df402352adc34d052bab9234c8ef63596306506a89fdc7328@%3Cusers.activemq.apache.org%3E",
+              "https://lists.apache.org/thread.html/r61db8e7dcb56dc000a5387a88f7a473bacec5ee01b9ff3f55308aacc@%3Cusers.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r61db8e7dcb56dc000a5387a88f7a473bacec5ee01b9ff3f55308aacc@%3Cdev.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/rbf4ce74b0d1fa9810dec50ba3ace0caeea677af7c27a97111c06ccb7@%3Cdev.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/rbf4ce74b0d1fa9810dec50ba3ace0caeea677af7c27a97111c06ccb7@%3Cusers.kafka.apache.org%3E",
+              "https://lists.apache.org/thread.html/r9d2e28e71f91ba0b6f4114c8ecd96e2b1f7e0d06bdf8eb768c183aa9@%3Ccommon-issues.hadoop.apache.org%3E",
+              "https://lists.apache.org/thread.html/re36da78e4f3955ba6c1c373a2ab85a4deb215ca74b85fcd66142fea1@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r594411f4bddebaf48a4c70266d0b7849e0d82bb72826f61b3a35bba7@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r6d34da5a0ca17ab08179a30c971446c7421af0e96f6d60867eabfc52@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rdb7ddf28807e27c7801f6e56a0dfb31092d34c61bdd4fa2de9182119@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/ra18a903f785aed9403aea38bc6f36844a056283c00dcfc6936b6318c@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rf53eeefb7e7e524deaacb9f8671cbf01b8a253e865fb94e7656722c0@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r90c23eb8c82835fa82df85ae5e88c81fd9241e20a22971b0fb8f2c34@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rb3c94619728c8f8c176d8e175e0a1086ca737ecdfcd5a2214bb768bc@%3Ccommits.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rfdf65fa675c64a64459817344e0e6c44d51ee264beea6e5851fb60dc@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/r8418a0dff1729f19cf1024937e23a2db4c0f94f2794a423f5c10e8e7@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/ra9611a8431cb62369bce8909d7645597e1dd45c24b448836b1e54940@%3Cissues.bookkeeper.apache.org%3E",
+              "https://lists.apache.org/thread.html/rcd71280585425dad7e232f239c5709e425efdd0d3de4a92f808a4767@%3Cissues.bookkeeper.apache.org%3E",
+              "https://www.oracle.com/security-alerts/cpuapr2022.html",
+              "https://www.oracle.com/security-alerts/cpujul2022.html"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-2qrg-x229-3v8q",
+          "description": "Deserialization of Untrusted Data in Log4j",
+          "fix": {
+            "state": "not-fixed",
+            "versions": []
+          },
+          "id": "GHSA-2qrg-x229-3v8q",
+          "namespace": "github:language:java",
+          "severity": "Critical",
+          "urls": [
+            "https://github.com/advisories/GHSA-2qrg-x229-3v8q"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:Django:1.9.6:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "Django",
+          "purl": "pkg:pypi/Django@1.9.6",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.9.6"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c1.11.18 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 4.3,
+                  "exploitabilityScore": 8.6,
+                  "impactScore": 2.9
+                },
+                "vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 6.5,
+                  "exploitabilityScore": 2.8,
+                  "impactScore": 3.6
+                },
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                "vendorMetadata": {},
+                "version": "3.0"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2019-3498",
+            "description": "In Django 1.11.x before 1.11.18, 2.0.x before 2.0.10, and 2.1.x before 2.1.5, an Improper Neutralization of Special Elements in Output Used by a Downstream Component issue exists in django.views.defaults.page_not_found(), leading to content spoofing (in a 404 error page) if a user fails to recognize that a crafted URL has malicious content.",
+            "id": "CVE-2019-3498",
+            "namespace": "nvd:cpe",
+            "severity": "Medium",
+            "urls": [
+              "https://www.djangoproject.com/weblog/2019/jan/04/security-releases/",
+              "https://groups.google.com/forum/#!topic/django-announce/VYU7xQQTEPQ",
+              "https://docs.djangoproject.com/en/dev/releases/security/",
+              "https://www.debian.org/security/2019/dsa-4363",
+              "https://usn.ubuntu.com/3851-1/",
+              "https://lists.debian.org/debian-lts-announce/2019/01/msg00005.html",
+              "http://www.securityfocus.com/bid/106453",
+              "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVXDOVCXLD74SHR2BENGCE2OOYYYWJHZ/"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-337x-4q8g-prc5",
+          "description": "Improper Input Validation Django",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.11.18"
+            ]
+          },
+          "id": "GHSA-337x-4q8g-prc5",
+          "namespace": "github:language:python",
+          "severity": "Medium",
+          "urls": [
+            "https://github.com/advisories/GHSA-337x-4q8g-prc5"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:Django:1.9.6:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "Django",
+          "purl": "pkg:pypi/Django@1.9.6",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.9.6"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003e=1.9,\u003c1.9.13 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 5.8,
+                  "exploitabilityScore": 8.6,
+                  "impactScore": 4.9
+                },
+                "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 6.1,
+                  "exploitabilityScore": 2.8,
+                  "impactScore": 2.7
+                },
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "vendorMetadata": {},
+                "version": "3.0"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2017-7233",
+            "description": "Django 1.10 before 1.10.7, 1.9 before 1.9.13, and 1.8 before 1.8.18 relies on user input in some cases to redirect the user to an \"on success\" URL. The security check for these redirects (namely ``django.utils.http.is_safe_url()``) considered some numeric URLs \"safe\" when they shouldn't be, aka an open redirect vulnerability. Also, if a developer relies on ``is_safe_url()`` to provide safe redirect targets and puts such a URL into a link, they could suffer from an XSS attack.",
+            "id": "CVE-2017-7233",
+            "namespace": "nvd:cpe",
+            "severity": "Medium",
+            "urls": [
+              "https://www.djangoproject.com/weblog/2017/apr/04/security-releases/",
+              "http://www.securityfocus.com/bid/97406",
+              "http://www.securitytracker.com/id/1038177",
+              "http://www.debian.org/security/2017/dsa-3835",
+              "https://access.redhat.com/errata/RHSA-2017:3093",
+              "https://access.redhat.com/errata/RHSA-2017:1596",
+              "https://access.redhat.com/errata/RHSA-2017:1470",
+              "https://access.redhat.com/errata/RHSA-2017:1462",
+              "https://access.redhat.com/errata/RHSA-2017:1451",
+              "https://access.redhat.com/errata/RHSA-2017:1445",
+              "https://access.redhat.com/errata/RHSA-2018:2927"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-37hp-765x-j95x",
+          "description": "Moderate severity vulnerability that affects django",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.9.13"
+            ]
+          },
+          "id": "GHSA-37hp-765x-j95x",
+          "namespace": "github:language:python",
+          "severity": "Medium",
+          "urls": [
+            "https://github.com/advisories/GHSA-37hp-765x-j95x"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:Django:1.9.6:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "Django",
+          "purl": "pkg:pypi/Django@1.9.6",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.9.6"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c1.11.29 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 6.5,
+                  "exploitabilityScore": 8,
+                  "impactScore": 6.4
+                },
+                "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 8.8,
+                  "exploitabilityScore": 2.8,
+                  "impactScore": 5.9
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2020-9402",
+            "description": "Django 1.11 before 1.11.29, 2.2 before 2.2.11, and 3.0 before 3.0.4 allows SQL Injection if untrusted data is used as a tolerance parameter in GIS functions and aggregates on Oracle. By passing a suitably crafted tolerance to GIS functions and aggregates on Oracle, it was possible to break escaping and inject malicious SQL.",
+            "id": "CVE-2020-9402",
+            "namespace": "nvd:cpe",
+            "severity": "High",
+            "urls": [
+              "https://groups.google.com/forum/#!topic/django-announce/fLUh_pOaKrY",
+              "https://www.djangoproject.com/weblog/2020/mar/04/security-releases/",
+              "https://docs.djangoproject.com/en/3.0/releases/security/",
+              "https://usn.ubuntu.com/4296-1/",
+              "https://security.netapp.com/advisory/ntap-20200327-0004/",
+              "https://security.gentoo.org/glsa/202004-17",
+              "https://www.debian.org/security/2020/dsa-4705",
+              "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4A2AP4T7RKPBCLTI2NNQG3T6MINDUUMZ/",
+              "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UZMN2NKAGTFE3YKMNM2JVJG7R2W7LLHY/",
+              "https://lists.debian.org/debian-lts-announce/2022/05/msg00035.html"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-3gh2-xw74-jmcw",
+          "description": "SQL injection in Django",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.11.29"
+            ]
+          },
+          "id": "GHSA-3gh2-xw74-jmcw",
+          "namespace": "github:language:python",
+          "severity": "High",
+          "urls": [
+            "https://github.com/advisories/GHSA-3gh2-xw74-jmcw"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:keycloak-saml-core:keycloak-saml-core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:keycloak-saml-core:keycloak_saml_core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:keycloak_saml_core:keycloak-saml-core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:keycloak_saml_core:keycloak_saml_core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:jboss-by-red-hat:keycloak-saml-core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:jboss-by-red-hat:keycloak_saml_core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:jboss_by_red_hat:keycloak-saml-core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:jboss_by_red_hat:keycloak_saml_core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:keycloak-saml:keycloak-saml-core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:keycloak-saml:keycloak_saml_core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:keycloak_saml:keycloak-saml-core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:keycloak_saml:keycloak_saml_core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:keycloak:keycloak-saml-core:1.8.1.Final:*:*:*:*:*:*:*",
+            "cpe:2.3:a:keycloak:keycloak_saml_core:1.8.1.Final:*:*:*:*:*:*:*"
+          ],
+          "language": "java",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/keycloak-saml-core-1.8.1.Final.jar"
+            }
+          ],
+          "metadata": {
+            "archiveDigests": [
+              {
+                "algorithm": "sha1",
+                "value": "73cebee358d4738326d4540ea496eefa1e5ad05f"
+              }
+            ],
+            "manifestName": "",
+            "pomArtifactID": "keycloak-saml-core",
+            "pomGroupID": "org.keycloak",
+            "virtualPath": "lib/keycloak-saml-core-1.8.1.Final.jar"
+          },
+          "metadataType": "JavaMetadata",
+          "name": "keycloak-saml-core",
+          "purl": "pkg:maven/org.keycloak/keycloak-saml-core@1.8.1.Final",
+          "type": "java-archive",
+          "upstreams": [],
+          "version": "1.8.1.Final"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c18.0.0 (unknown)"
+            },
+            "matcher": "java-matcher",
+            "searchedBy": {
+              "language": "java",
+              "namespace": "github:language:java"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 6.8,
+                  "exploitabilityScore": 1.6,
+                  "impactScore": 5.2
+                },
+                "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-3827",
+            "description": "A flaw was found in keycloak, where the default ECP binding flow allows other authentication flows to be bypassed. By exploiting this behavior, an attacker can bypass the MFA authentication by sending a SOAP request with an AuthnRequest and Authorization header with the user's credentials. The highest threat from this vulnerability is to confidentiality and integrity.",
+            "id": "CVE-2021-3827",
+            "namespace": "nvd:cpe",
+            "severity": "Medium",
+            "urls": [
+              "https://github.com/keycloak/keycloak/commit/44000caaf5051d7f218d1ad79573bd3d175cad0d",
+              "https://bugzilla.redhat.com/show_bug.cgi?id=2007512",
+              "https://access.redhat.com/security/cve/CVE-2021-3827",
+              "https://github.com/keycloak/keycloak/security/advisories/GHSA-4pc7-vqv5-5r3v"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-4pc7-vqv5-5r3v",
+          "description": "ECP SAML binding bypasses authentication flows",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "18.0.0"
+            ]
+          },
+          "id": "GHSA-4pc7-vqv5-5r3v",
+          "namespace": "github:language:java",
+          "severity": "High",
+          "urls": [
+            "https://github.com/advisories/GHSA-4pc7-vqv5-5r3v"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:apache-software-foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache_software_foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:log4j:log4j:1.2.17:*:*:*:*:*:*:*"
+          ],
+          "language": "java",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/lib2/log4j-1.2.17.jar"
+            }
+          ],
+          "metadata": {
+            "archiveDigests": [
+              {
+                "algorithm": "sha1",
+                "value": "5af35056b4d257e4b64b9e8069c0746e8b08629f"
+              }
+            ],
+            "manifestName": "",
+            "pomArtifactID": "log4j",
+            "pomGroupID": "log4j",
+            "virtualPath": "lib/lib2/log4j-1.2.17.jar"
+          },
+          "metadataType": "JavaMetadata",
+          "name": "log4j",
+          "purl": "pkg:maven/log4j/log4j@1.2.17",
+          "type": "java-archive",
+          "upstreams": [],
+          "version": "1.2.17"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c=1.2.17 (unknown)"
+            },
+            "matcher": "java-matcher",
+            "searchedBy": {
+              "language": "java",
+              "namespace": "github:language:java"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 6.8,
+                  "exploitabilityScore": 8.6,
+                  "impactScore": 6.4
+                },
+                "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 9.8,
+                  "exploitabilityScore": 3.9,
+                  "impactScore": 5.9
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-23305",
+            "description": "By design, the JDBCAppender in Log4j 1.2.x accepts an SQL statement as a configuration parameter where the values to be inserted are converters from PatternLayout. The message converter, %m, is likely to always be included. This allows attackers to manipulate the SQL by entering crafted strings into input fields or headers of an application that are logged allowing unintended SQL queries to be executed. Note this issue only affects Log4j 1.x when specifically configured to use the JDBCAppender, which is not the default. Beginning in version 2.0-beta8, the JDBCAppender was re-introduced with proper support for parameterized SQL queries and further customization over the columns written to in logs. Apache Log4j 1.2 reached end of life in August 2015. Users should upgrade to Log4j 2 as it addresses numerous other issues from the previous versions.",
+            "id": "CVE-2022-23305",
+            "namespace": "nvd:cpe",
+            "severity": "Critical",
+            "urls": [
+              "https://lists.apache.org/thread/pt6lh3pbsvxqlwlp4c5l798dv2hkc85y",
+              "https://logging.apache.org/log4j/1.2/index.html",
+              "https://security.netapp.com/advisory/ntap-20220217-0007/",
+              "http://www.openwall.com/lists/oss-security/2022/01/18/4",
+              "https://www.oracle.com/security-alerts/cpuapr2022.html",
+              "https://www.oracle.com/security-alerts/cpujul2022.html"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-65fg-84f6-3jq3",
+          "description": "SQL Injection in Log4j 1.2.x",
+          "fix": {
+            "state": "not-fixed",
+            "versions": []
+          },
+          "id": "GHSA-65fg-84f6-3jq3",
+          "namespace": "github:language:java",
+          "severity": "Critical",
+          "urls": [
+            "https://github.com/advisories/GHSA-65fg-84f6-3jq3"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:Django:1.9.6:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "Django",
+          "purl": "pkg:pypi/Django@1.9.6",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.9.6"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c2.2.24 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 4,
+                  "exploitabilityScore": 8,
+                  "impactScore": 2.9
+                },
+                "vector": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 4.9,
+                  "exploitabilityScore": 1.2,
+                  "impactScore": 3.6
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-33203",
+            "description": "Django before 2.2.24, 3.x before 3.1.12, and 3.2.x before 3.2.4 has a potential directory traversal via django.contrib.admindocs. Staff members could use the TemplateDetailView view to check the existence of arbitrary files. Additionally, if (and only if) the default admindocs templates have been customized by application developers to also show file contents, then not only the existence but also the file contents would have been exposed. In other words, there is directory traversal outside of the template root directories.",
+            "id": "CVE-2021-33203",
+            "namespace": "nvd:cpe",
+            "severity": "Medium",
+            "urls": [
+              "https://docs.djangoproject.com/en/3.2/releases/security/",
+              "https://www.djangoproject.com/weblog/2021/jun/02/security-releases/",
+              "https://groups.google.com/forum/#!forum/django-announce",
+              "https://security.netapp.com/advisory/ntap-20210727-0004/",
+              "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/B4SQG2EAF4WCI2SLRL6XRDJ3RPK3ZRDV/"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-68w8-qjq3-2gfm",
+          "description": "Path Traversal in Django",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "2.2.24"
+            ]
+          },
+          "id": "GHSA-68w8-qjq3-2gfm",
+          "namespace": "github:language:python",
+          "severity": "Medium",
+          "urls": [
+            "https://github.com/advisories/GHSA-68w8-qjq3-2gfm"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:follow-redirects:follow-redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow-redirects:follow_redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow_redirects:follow-redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow_redirects:follow_redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow:follow-redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow:follow_redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:*:follow-redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:*:follow_redirects:1.13.3:*:*:*:*:*:*:*"
+          ],
+          "language": "javascript",
+          "licenses": [
+            ""
+          ],
+          "locations": [
+            {
+              "path": "lib/js/package-lock.json"
+            }
+          ],
+          "name": "follow-redirects",
+          "purl": "pkg:npm/follow-redirects@1.13.3",
+          "type": "npm",
+          "upstreams": [],
+          "version": "1.13.3"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c1.14.7 (unknown)"
+            },
+            "matcher": "javascript-matcher",
+            "searchedBy": {
+              "language": "javascript",
+              "namespace": "github:language:javascript"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 4.3,
+                  "exploitabilityScore": 8.6,
+                  "impactScore": 2.9
+                },
+                "vector": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 6.5,
+                  "exploitabilityScore": 2.8,
+                  "impactScore": 3.6
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-0155",
+            "description": "follow-redirects is vulnerable to Exposure of Private Personal Information to an Unauthorized Actor",
+            "id": "CVE-2022-0155",
+            "namespace": "nvd:cpe",
+            "severity": "Medium",
+            "urls": [
+              "https://huntr.dev/bounties/fc524e4b-ebb6-427d-ab67-a64181020406",
+              "https://github.com/follow-redirects/follow-redirects/commit/8b347cbcef7c7b72a6e9be20f5710c17d6163c22",
+              "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-74fj-2j2h-c42q",
+          "description": "Exposure of sensitive information in follow-redirects",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.14.7"
+            ]
+          },
+          "id": "GHSA-74fj-2j2h-c42q",
+          "namespace": "github:language:javascript",
+          "severity": "High",
+          "urls": [
+            "https://github.com/advisories/GHSA-74fj-2j2h-c42q"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:axios:axios:0.21.1:*:*:*:*:*:*:*",
+            "cpe:2.3:a:*:axios:0.21.1:*:*:*:*:*:*:*"
+          ],
+          "language": "javascript",
+          "licenses": [
+            ""
+          ],
+          "locations": [
+            {
+              "path": "lib/js/package-lock.json"
+            }
+          ],
+          "name": "axios",
+          "purl": "pkg:npm/axios@0.21.1",
+          "type": "npm",
+          "upstreams": [],
+          "version": "0.21.1"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c0.21.2 (unknown)"
+            },
+            "matcher": "javascript-matcher",
+            "searchedBy": {
+              "language": "javascript",
+              "namespace": "github:language:javascript"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 7.8,
+                  "exploitabilityScore": 10,
+                  "impactScore": 6.9
+                },
+                "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 7.5,
+                  "exploitabilityScore": 3.9,
+                  "impactScore": 3.6
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-3749",
+            "description": "axios is vulnerable to Inefficient Regular Expression Complexity",
+            "id": "CVE-2021-3749",
+            "namespace": "nvd:cpe",
+            "severity": "High",
+            "urls": [
+              "https://github.com/axios/axios/commit/5b457116e31db0e88fede6c428e969e87f290929",
+              "https://huntr.dev/bounties/1e8f07fc-c384-4ff9-8498-0690de2e8c31",
+              "https://lists.apache.org/thread.html/rfc5c478053ff808671aef170f3d9fc9d05cc1fab8fb64431edc66103@%3Ccommits.druid.apache.org%3E",
+              "https://lists.apache.org/thread.html/r7324ecc35b8027a51cb6ed629490fcd3b2d7cf01c424746ed5744bf1@%3Ccommits.druid.apache.org%3E",
+              "https://lists.apache.org/thread.html/r216f0fd0a3833856d6a6a1fada488cadba45f447d87010024328ccf2@%3Ccommits.druid.apache.org%3E",
+              "https://lists.apache.org/thread.html/r3ae6d2654f92c5851bdb73b35e96b0e4e3da39f28ac7a1b15ae3aab8@%3Ccommits.druid.apache.org%3E",
+              "https://lists.apache.org/thread.html/ra15d63c54dc6474b29f72ae4324bcb03038758545b3ab800845de7a1@%3Ccommits.druid.apache.org%3E",
+              "https://lists.apache.org/thread.html/rc263bfc5b53afcb7e849605478d73f5556eb0c00d1f912084e407289@%3Ccommits.druid.apache.org%3E",
+              "https://lists.apache.org/thread.html/r74d0b359408fff31f87445261f0ee13bdfcac7d66f6b8e846face321@%3Ccommits.druid.apache.org%3E",
+              "https://lists.apache.org/thread.html/r4bf1b32983f50be00f9752214c1b53738b621be1c2b0dbd68c7f2391@%3Ccommits.druid.apache.org%3E",
+              "https://lists.apache.org/thread.html/r075d464dce95cd13c03ff9384658edcccd5ab2983b82bfc72b62bb10@%3Ccommits.druid.apache.org%3E",
+              "https://lists.apache.org/thread.html/rfa094029c959da0f7c8cd7dc9c4e59d21b03457bf0cedf6c93e1bb0a@%3Cdev.druid.apache.org%3E",
+              "https://www.oracle.com/security-alerts/cpujul2022.html",
+              "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-cph5-m8f7-6c5x",
+          "description": "axios Inefficient Regular Expression Complexity vulnerability",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "0.21.2"
+            ]
+          },
+          "id": "GHSA-cph5-m8f7-6c5x",
+          "namespace": "github:language:javascript",
+          "severity": "High",
+          "urls": [
+            "https://github.com/advisories/GHSA-cph5-m8f7-6c5x"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:apache-software-foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache_software_foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:log4j:log4j:1.2.17:*:*:*:*:*:*:*"
+          ],
+          "language": "java",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/lib2/log4j-1.2.17.jar"
+            }
+          ],
+          "metadata": {
+            "archiveDigests": [
+              {
+                "algorithm": "sha1",
+                "value": "5af35056b4d257e4b64b9e8069c0746e8b08629f"
+              }
+            ],
+            "manifestName": "",
+            "pomArtifactID": "log4j",
+            "pomGroupID": "log4j",
+            "virtualPath": "lib/lib2/log4j-1.2.17.jar"
+          },
+          "metadataType": "JavaMetadata",
+          "name": "log4j",
+          "purl": "pkg:maven/log4j/log4j@1.2.17",
+          "type": "java-archive",
+          "upstreams": [],
+          "version": "1.2.17"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c=1.2.17 (unknown)"
+            },
+            "matcher": "java-matcher",
+            "searchedBy": {
+              "language": "java",
+              "namespace": "github:language:java"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 9,
+                  "exploitabilityScore": 8,
+                  "impactScore": 10
+                },
+                "vector": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 8.8,
+                  "exploitabilityScore": 2.8,
+                  "impactScore": 5.9
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-23307",
+            "description": "CVE-2020-9493 identified a deserialization issue that was present in Apache Chainsaw. Prior to Chainsaw V2.0 Chainsaw was a component of Apache Log4j 1.2.x where the same issue exists.",
+            "id": "CVE-2022-23307",
+            "namespace": "nvd:cpe",
+            "severity": "High",
+            "urls": [
+              "https://lists.apache.org/thread/rg4yyc89vs3dw6kpy3r92xop9loywyhh",
+              "https://logging.apache.org/log4j/1.2/index.html",
+              "https://www.oracle.com/security-alerts/cpuapr2022.html",
+              "https://www.oracle.com/security-alerts/cpujul2022.html"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-f7vh-qwp3-x37m",
+          "description": "Deserialization of Untrusted Data in Apache Log4j",
+          "fix": {
+            "state": "not-fixed",
+            "versions": []
+          },
+          "id": "GHSA-f7vh-qwp3-x37m",
+          "namespace": "github:language:java",
+          "severity": "Critical",
+          "urls": [
+            "https://github.com/advisories/GHSA-f7vh-qwp3-x37m"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:apache-software-foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache_software_foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:log4j:log4j:1.2.17:*:*:*:*:*:*:*"
+          ],
+          "language": "java",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/lib2/log4j-1.2.17.jar"
+            }
+          ],
+          "metadata": {
+            "archiveDigests": [
+              {
+                "algorithm": "sha1",
+                "value": "5af35056b4d257e4b64b9e8069c0746e8b08629f"
+              }
+            ],
+            "manifestName": "",
+            "pomArtifactID": "log4j",
+            "pomGroupID": "log4j",
+            "virtualPath": "lib/lib2/log4j-1.2.17.jar"
+          },
+          "metadataType": "JavaMetadata",
+          "name": "log4j",
+          "purl": "pkg:maven/log4j/log4j@1.2.17",
+          "type": "java-archive",
+          "upstreams": [],
+          "version": "1.2.17"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003e=1.2.0,\u003c=1.2.17 (unknown)"
+            },
+            "matcher": "java-matcher",
+            "searchedBy": {
+              "language": "java",
+              "namespace": "github:language:java"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 6,
+                  "exploitabilityScore": 6.8,
+                  "impactScore": 6.4
+                },
+                "vector": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 7.5,
+                  "exploitabilityScore": 1.6,
+                  "impactScore": 5.9
+                },
+                "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-4104",
+            "description": "JMSAppender in Log4j 1.2 is vulnerable to deserialization of untrusted data when the attacker has write access to the Log4j configuration. The attacker can provide TopicBindingName and TopicConnectionFactoryBindingName configurations causing JMSAppender to perform JNDI requests that result in remote code execution in a similar fashion to CVE-2021-44228. Note this issue only affects Log4j 1.2 when specifically configured to use JMSAppender, which is not the default. Apache Log4j 1.2 reached end of life in August 2015. Users should upgrade to Log4j 2 as it addresses numerous other issues from the previous versions.",
+            "id": "CVE-2021-4104",
+            "namespace": "nvd:cpe",
+            "severity": "High",
+            "urls": [
+              "https://access.redhat.com/security/cve/CVE-2021-4104",
+              "https://www.cve.org/CVERecord?id=CVE-2021-44228",
+              "https://github.com/apache/logging-log4j2/pull/608#issuecomment-990494126",
+              "https://www.kb.cert.org/vuls/id/930724",
+              "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0033",
+              "https://security.netapp.com/advisory/ntap-20211223-0007/",
+              "http://www.openwall.com/lists/oss-security/2022/01/18/3",
+              "https://www.oracle.com/security-alerts/cpujan2022.html",
+              "https://www.oracle.com/security-alerts/cpuapr2022.html",
+              "https://www.oracle.com/security-alerts/cpujul2022.html",
+              "https://security.gentoo.org/glsa/202209-02"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-fp5r-v3w9-4333",
+          "description": "JMSAppender in Log4j 1.2 is vulnerable to deserialization of untrusted data",
+          "fix": {
+            "state": "not-fixed",
+            "versions": []
+          },
+          "id": "GHSA-fp5r-v3w9-4333",
+          "namespace": "github:language:java",
+          "severity": "High",
+          "urls": [
+            "https://github.com/advisories/GHSA-fp5r-v3w9-4333"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:Django:1.9.6:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "Django",
+          "purl": "pkg:pypi/Django@1.9.6",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.9.6"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003e=1.9,\u003c1.9.13 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 5.8,
+                  "exploitabilityScore": 8.6,
+                  "impactScore": 4.9
+                },
+                "vector": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 6.1,
+                  "exploitabilityScore": 2.8,
+                  "impactScore": 2.7
+                },
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "vendorMetadata": {},
+                "version": "3.0"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2017-7234",
+            "description": "A maliciously crafted URL to a Django (1.10 before 1.10.7, 1.9 before 1.9.13, and 1.8 before 1.8.18) site using the ``django.views.static.serve()`` view could redirect to any other domain, aka an open redirect vulnerability.",
+            "id": "CVE-2017-7234",
+            "namespace": "nvd:cpe",
+            "severity": "Medium",
+            "urls": [
+              "https://www.djangoproject.com/weblog/2017/apr/04/security-releases/",
+              "http://www.securityfocus.com/bid/97401",
+              "http://www.securitytracker.com/id/1038177",
+              "http://www.debian.org/security/2017/dsa-3835"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-h4hv-m4h4-mhwg",
+          "description": "Moderate severity vulnerability that affects django",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.9.13"
+            ]
+          },
+          "id": "GHSA-h4hv-m4h4-mhwg",
+          "namespace": "github:language:python",
+          "severity": "Medium",
+          "urls": [
+            "https://github.com/advisories/GHSA-h4hv-m4h4-mhwg"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:Django:1.9.6:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "Django",
+          "purl": "pkg:pypi/Django@1.9.6",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.9.6"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c1.11.28 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 7.5,
+                  "exploitabilityScore": 10,
+                  "impactScore": 6.4
+                },
+                "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 9.8,
+                  "exploitabilityScore": 3.9,
+                  "impactScore": 5.9
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2020-7471",
+            "description": "Django 1.11 before 1.11.28, 2.2 before 2.2.10, and 3.0 before 3.0.3 allows SQL Injection if untrusted data is used as a StringAgg delimiter (e.g., in Django applications that offer downloads of data as a series of rows with a user-specified column delimiter). By passing a suitably crafted delimiter to a contrib.postgres.aggregates.StringAgg instance, it was possible to break escaping and inject malicious SQL.",
+            "id": "CVE-2020-7471",
+            "namespace": "nvd:cpe",
+            "severity": "Critical",
+            "urls": [
+              "https://www.openwall.com/lists/oss-security/2020/02/03/1",
+              "https://docs.djangoproject.com/en/3.0/releases/security/",
+              "https://groups.google.com/forum/#!topic/django-announce/X45S86X5bZI",
+              "https://www.djangoproject.com/weblog/2020/feb/03/security-releases/",
+              "http://www.openwall.com/lists/oss-security/2020/02/03/1",
+              "https://github.com/django/django/commit/eb31d845323618d688ad429479c6dda973056136",
+              "https://usn.ubuntu.com/4264-1/",
+              "https://seclists.org/bugtraq/2020/Feb/30",
+              "https://www.debian.org/security/2020/dsa-4629",
+              "https://security.netapp.com/advisory/ntap-20200221-0006/",
+              "https://security.gentoo.org/glsa/202004-17",
+              "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4A2AP4T7RKPBCLTI2NNQG3T6MINDUUMZ/"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-hmr4-m2h5-33qx",
+          "description": "SQL injection in Django",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.11.28"
+            ]
+          },
+          "id": "GHSA-hmr4-m2h5-33qx",
+          "namespace": "github:language:python",
+          "severity": "Critical",
+          "urls": [
+            "https://github.com/advisories/GHSA-hmr4-m2h5-33qx"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-django-debug-toolbar:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django-debug-toolbar:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django_debug_toolbar:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django_debug_toolbar:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django-debug-toolbar:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django-debug-toolbar:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django_debug_toolbar:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django_debug_toolbar:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django-debug-toolbar:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django-debug-toolbar:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django_debug_toolbar:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django_debug_toolbar:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django-debug:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django-debug:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django_debug:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django_debug:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django-debug-toolbar:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django-debug-toolbar:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django_debug_toolbar:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django_debug_toolbar:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django-debug:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django-debug:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django_debug:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django_debug:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django-debug:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django-debug:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django_debug:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django_debug:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-django:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_django:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django-debug:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django-debug:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django_debug:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django_debug:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:django:django_debug_toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:django-debug-toolbar:1.4:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:django_debug_toolbar:1.4:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "django-debug-toolbar",
+          "purl": "pkg:pypi/django-debug-toolbar@1.4",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.4"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003e=0.10.0,\u003c1.11.1 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 7.5,
+                  "exploitabilityScore": 10,
+                  "impactScore": 6.4
+                },
+                "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 9.8,
+                  "exploitabilityScore": 3.9,
+                  "impactScore": 5.9
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-30459",
+            "description": "A SQL Injection issue in the SQL Panel in Jazzband Django Debug Toolbar before 1.11.1, 2.x before 2.2.1, and 3.x before 3.2.1 allows attackers to execute SQL statements by changing the raw_sql input field of the SQL explain, analyze, or select form.",
+            "id": "CVE-2021-30459",
+            "namespace": "nvd:cpe",
+            "severity": "Critical",
+            "urls": [
+              "https://github.com/jazzband/django-debug-toolbar/security/advisories/GHSA-pghf-347x-c2gj",
+              "https://www.djangoproject.com/weblog/2021/apr/14/debug-toolbar-security-releases/",
+              "https://github.com/jazzband/django-debug-toolbar/releases"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-pghf-347x-c2gj",
+          "description": "SQL Injection via in django-debug-toolbar",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.11.1"
+            ]
+          },
+          "id": "GHSA-pghf-347x-c2gj",
+          "namespace": "github:language:python",
+          "severity": "High",
+          "urls": [
+            "https://github.com/advisories/GHSA-pghf-347x-c2gj"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:follow-redirects:follow-redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow-redirects:follow_redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow_redirects:follow-redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow_redirects:follow_redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow:follow-redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:follow:follow_redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:*:follow-redirects:1.13.3:*:*:*:*:*:*:*",
+            "cpe:2.3:a:*:follow_redirects:1.13.3:*:*:*:*:*:*:*"
+          ],
+          "language": "javascript",
+          "licenses": [
+            ""
+          ],
+          "locations": [
+            {
+              "path": "lib/js/package-lock.json"
+            }
+          ],
+          "name": "follow-redirects",
+          "purl": "pkg:npm/follow-redirects@1.13.3",
+          "type": "npm",
+          "upstreams": [],
+          "version": "1.13.3"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c1.14.8 (unknown)"
+            },
+            "matcher": "javascript-matcher",
+            "searchedBy": {
+              "language": "javascript",
+              "namespace": "github:language:javascript"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 4.3,
+                  "exploitabilityScore": 8.6,
+                  "impactScore": 2.9
+                },
+                "vector": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 5.9,
+                  "exploitabilityScore": 2.2,
+                  "impactScore": 3.6
+                },
+                "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-0536",
+            "description": "Exposure of Sensitive Information to an Unauthorized Actor in NPM follow-redirects prior to 1.14.8.",
+            "id": "CVE-2022-0536",
+            "namespace": "nvd:cpe",
+            "severity": "Medium",
+            "urls": [
+              "https://huntr.dev/bounties/7cf2bf90-52da-4d59-8028-a73b132de0db",
+              "https://github.com/follow-redirects/follow-redirects/commit/62e546a99c07c3ee5e4e0718c84a6ca127c5c445"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-pw2r-vq6v-hr8c",
+          "description": "Exposure of Sensitive Information to an Unauthorized Actor in follow-redirects",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.14.8"
+            ]
+          },
+          "id": "GHSA-pw2r-vq6v-hr8c",
+          "namespace": "github:language:javascript",
+          "severity": "Medium",
+          "urls": [
+            "https://github.com/advisories/GHSA-pw2r-vq6v-hr8c"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:Django:1.9.6:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "Django",
+          "purl": "pkg:pypi/Django@1.9.6",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.9.6"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c2.2.25 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 7.5,
+                  "exploitabilityScore": 10,
+                  "impactScore": 6.4
+                },
+                "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 7.3,
+                  "exploitabilityScore": 3.9,
+                  "impactScore": 3.4
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-44420",
+            "description": "In Django 2.2 before 2.2.25, 3.1 before 3.1.14, and 3.2 before 3.2.10, HTTP requests for URLs with trailing newlines could bypass upstream access control based on URL paths.",
+            "id": "CVE-2021-44420",
+            "namespace": "nvd:cpe",
+            "severity": "High",
+            "urls": [
+              "https://docs.djangoproject.com/en/3.2/releases/security/",
+              "https://www.openwall.com/lists/oss-security/2021/12/07/1",
+              "https://www.djangoproject.com/weblog/2021/dec/07/security-releases/",
+              "https://groups.google.com/forum/#!forum/django-announce",
+              "https://security.netapp.com/advisory/ntap-20211229-0006/",
+              "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/B4SQG2EAF4WCI2SLRL6XRDJ3RPK3ZRDV/"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-v6rh-hp5x-86rv",
+          "description": "Potential bypass of an upstream access control based on URL paths in Django",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "2.2.25"
+            ]
+          },
+          "id": "GHSA-v6rh-hp5x-86rv",
+          "namespace": "github:language:python",
+          "severity": "High",
+          "urls": [
+            "https://github.com/advisories/GHSA-v6rh-hp5x-86rv"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:Django:1.9.6:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "Django",
+          "purl": "pkg:pypi/Django@1.9.6",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.9.6"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c1.11.27 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 5,
+                  "exploitabilityScore": 10,
+                  "impactScore": 2.9
+                },
+                "vector": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 9.8,
+                  "exploitabilityScore": 3.9,
+                  "impactScore": 5.9
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2019-19844",
+            "description": "Django before 1.11.27, 2.x before 2.2.9, and 3.x before 3.0.1 allows account takeover. A suitably crafted email address (that is equal to an existing user's email address after case transformation of Unicode characters) would allow an attacker to be sent a password reset token for the matched user account. (One mitigation in the new releases is to send password reset tokens only to the registered user email address.)",
+            "id": "CVE-2019-19844",
+            "namespace": "nvd:cpe",
+            "severity": "Critical",
+            "urls": [
+              "https://groups.google.com/forum/#!topic/django-announce/3oaB2rVH3a0",
+              "https://www.djangoproject.com/weblog/2019/dec/18/security-releases/",
+              "https://docs.djangoproject.com/en/dev/releases/security/",
+              "https://usn.ubuntu.com/4224-1/",
+              "https://www.debian.org/security/2020/dsa-4598",
+              "https://seclists.org/bugtraq/2020/Jan/9",
+              "http://packetstormsecurity.com/files/155872/Django-Account-Hijack.html",
+              "https://security.netapp.com/advisory/ntap-20200110-0003/",
+              "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HCM2DPUI7TOZWN4A6JFQFUVQ2XGE7GUD/",
+              "https://security.gentoo.org/glsa/202004-17"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-vfq6-hq5r-27r6",
+          "description": "Potential account hijack via password reset form in Django",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.11.27"
+            ]
+          },
+          "id": "GHSA-vfq6-hq5r-27r6",
+          "namespace": "github:language:python",
+          "severity": "Critical",
+          "urls": [
+            "https://github.com/advisories/GHSA-vfq6-hq5r-27r6"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:apache-software-foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache_software_foundation:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:apache:log4j:1.2.17:*:*:*:*:*:*:*",
+            "cpe:2.3:a:log4j:log4j:1.2.17:*:*:*:*:*:*:*"
+          ],
+          "language": "java",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/lib2/log4j-1.2.17.jar"
+            }
+          ],
+          "metadata": {
+            "archiveDigests": [
+              {
+                "algorithm": "sha1",
+                "value": "5af35056b4d257e4b64b9e8069c0746e8b08629f"
+              }
+            ],
+            "manifestName": "",
+            "pomArtifactID": "log4j",
+            "pomGroupID": "log4j",
+            "virtualPath": "lib/lib2/log4j-1.2.17.jar"
+          },
+          "metadataType": "JavaMetadata",
+          "name": "log4j",
+          "purl": "pkg:maven/log4j/log4j@1.2.17",
+          "type": "java-archive",
+          "upstreams": [],
+          "version": "1.2.17"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c=1.2.17 (unknown)"
+            },
+            "matcher": "java-matcher",
+            "searchedBy": {
+              "language": "java",
+              "namespace": "github:language:java"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 6,
+                  "exploitabilityScore": 6.8,
+                  "impactScore": 6.4
+                },
+                "vector": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 8.8,
+                  "exploitabilityScore": 2.8,
+                  "impactScore": 5.9
+                },
+                "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "vendorMetadata": {},
+                "version": "3.1"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2022-23302",
+            "description": "JMSSink in all versions of Log4j 1.x is vulnerable to deserialization of untrusted data when the attacker has write access to the Log4j configuration or if the configuration references an LDAP service the attacker has access to. The attacker can provide a TopicConnectionFactoryBindingName configuration causing JMSSink to perform JNDI requests that result in remote code execution in a similar fashion to CVE-2021-4104. Note this issue only affects Log4j 1.x when specifically configured to use JMSSink, which is not the default. Apache Log4j 1.2 reached end of life in August 2015. Users should upgrade to Log4j 2 as it addresses numerous other issues from the previous versions.",
+            "id": "CVE-2022-23302",
+            "namespace": "nvd:cpe",
+            "severity": "High",
+            "urls": [
+              "https://lists.apache.org/thread/bsr3l5qz4g0myrjhy9h67bcxodpkwj4w",
+              "https://logging.apache.org/log4j/1.2/index.html",
+              "http://www.openwall.com/lists/oss-security/2022/01/18/3",
+              "https://security.netapp.com/advisory/ntap-20220217-0006/",
+              "https://www.oracle.com/security-alerts/cpuapr2022.html",
+              "https://www.oracle.com/security-alerts/cpujul2022.html"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-w9p3-5cr8-m3jj",
+          "description": "Deserialization of Untrusted Data in Log4j 1.x",
+          "fix": {
+            "state": "not-fixed",
+            "versions": []
+          },
+          "id": "GHSA-w9p3-5cr8-m3jj",
+          "namespace": "github:language:java",
+          "severity": "High",
+          "urls": [
+            "https://github.com/advisories/GHSA-w9p3-5cr8-m3jj"
+          ]
+        }
+      },
+      {
+        "artifact": {
+          "cpes": [
+            "cpe:2.3:a:python-Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python-Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python-Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:python_Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python_Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:Django:Django:1.9.6:*:*:*:*:*:*:*",
+            "cpe:2.3:a:python:Django:1.9.6:*:*:*:*:*:*:*"
+          ],
+          "language": "python",
+          "licenses": [],
+          "locations": [
+            {
+              "path": "lib/python/requirements.txt"
+            }
+          ],
+          "name": "Django",
+          "purl": "pkg:pypi/Django@1.9.6",
+          "type": "python",
+          "upstreams": [],
+          "version": "1.9.6"
+        },
+        "matchDetails": [
+          {
+            "found": {
+              "versionConstraint": "\u003c1.11.19 (python)"
+            },
+            "matcher": "python-matcher",
+            "searchedBy": {
+              "language": "python",
+              "namespace": "github:language:python"
+            },
+            "type": "exact-direct-match"
+          }
+        ],
+        "relatedVulnerabilities": [
+          {
+            "cvss": [
+              {
+                "metrics": {
+                  "baseScore": 5,
+                  "exploitabilityScore": 10,
+                  "impactScore": 2.9
+                },
+                "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "vendorMetadata": {},
+                "version": "2.0"
+              },
+              {
+                "metrics": {
+                  "baseScore": 7.5,
+                  "exploitabilityScore": 3.9,
+                  "impactScore": 3.6
+                },
+                "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "vendorMetadata": {},
+                "version": "3.0"
+              }
+            ],
+            "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2019-6975",
+            "description": "Django 1.11.x before 1.11.19, 2.0.x before 2.0.11, and 2.1.x before 2.1.6 allows Uncontrolled Memory Consumption via a malicious attacker-supplied value to the django.utils.numberformat.format() function.",
+            "id": "CVE-2019-6975",
+            "namespace": "nvd:cpe",
+            "severity": "High",
+            "urls": [
+              "https://www.openwall.com/lists/oss-security/2019/02/11/1",
+              "https://www.djangoproject.com/weblog/2019/feb/11/security-releases/",
+              "https://groups.google.com/forum/#!topic/django-announce/WTwEAprR0IQ",
+              "https://docs.djangoproject.com/en/dev/releases/security/",
+              "http://www.securityfocus.com/bid/106964",
+              "https://usn.ubuntu.com/3890-1/",
+              "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVXDOVCXLD74SHR2BENGCE2OOYYYWJHZ/",
+              "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/66WMXHGBXD7GSM3PEXVCMCAGLMQYHZCU/",
+              "https://www.debian.org/security/2019/dsa-4476",
+              "https://seclists.org/bugtraq/2019/Jul/10"
+            ]
+          }
+        ],
+        "vulnerability": {
+          "advisories": [],
+          "cvss": [],
+          "dataSource": "https://github.com/advisories/GHSA-wh4h-v3f2-r2pp",
+          "description": "Uncontrolled Memory Consumption in Django",
+          "fix": {
+            "state": "fixed",
+            "versions": [
+              "1.11.19"
+            ]
+          },
+          "id": "GHSA-wh4h-v3f2-r2pp",
+          "namespace": "github:language:python",
+          "severity": "High",
+          "urls": [
+            "https://github.com/advisories/GHSA-wh4h-v3f2-r2pp"
+          ]
+        }
+      }
+    ],
+    "source": {
+      "target": "insecure-test",
+      "type": "directory"
+    }
+  },
+  "secrets": {
+    "ArtifactName": "insecure-test",
+    "ArtifactType": "filesystem",
+    "Metadata": {
+      "ImageConfig": {
+        "architecture": "",
+        "config": {},
+        "created": "0001-01-01T00:00:00Z",
+        "os": "",
+        "rootfs": {
+          "diff_ids": null,
+          "type": ""
+        }
+      }
+    },
+    "Results": [
+      {
+        "Class": "secret",
+        "Secrets": [
+          {
+            "Category": "AWS",
+            "Code": {
+              "Lines": [
+                {
+                  "Annotation": "",
+                  "Content": "[default]",
+                  "FirstCause": false,
+                  "Highlighted": "[default]",
+                  "IsCause": false,
+                  "LastCause": false,
+                  "Number": 3,
+                  "Truncated": false
+                },
+                {
+                  "Annotation": "",
+                  "Content": "",
+                  "FirstCause": false,
+                  "IsCause": false,
+                  "LastCause": false,
+                  "Number": 4,
+                  "Truncated": false
+                },
+                {
+                  "Annotation": "",
+                  "Content": "aws_access_key_id=********************",
+                  "FirstCause": true,
+                  "Highlighted": "aws_access_key_id=********************",
+                  "IsCause": true,
+                  "LastCause": true,
+                  "Number": 5,
+                  "Truncated": false
+                },
+                {
+                  "Annotation": "",
+                  "Content": "aws_secret_access_key=****************************************",
+                  "FirstCause": false,
+                  "Highlighted": "aws_secret_access_key=****************************************",
+                  "IsCause": false,
+                  "LastCause": false,
+                  "Number": 6,
+                  "Truncated": false
+                }
+              ]
+            },
+            "EndLine": 5,
+            "Layer": {},
+            "Match": "aws_access_key_id=********************",
+            "RuleID": "aws-access-key-id",
+            "Severity": "CRITICAL",
+            "StartLine": 5,
+            "Title": "AWS Access Key ID"
+          },
+          {
+            "Category": "AWS",
+            "Code": {
+              "Lines": [
+                {
+                  "Annotation": "",
+                  "Content": "",
+                  "FirstCause": false,
+                  "IsCause": false,
+                  "LastCause": false,
+                  "Number": 4,
+                  "Truncated": false
+                },
+                {
+                  "Annotation": "",
+                  "Content": "aws_access_key_id=********************",
+                  "FirstCause": false,
+                  "Highlighted": "aws_access_key_id=********************",
+                  "IsCause": false,
+                  "LastCause": false,
+                  "Number": 5,
+                  "Truncated": false
+                },
+                {
+                  "Annotation": "",
+                  "Content": "aws_secret_access_key=****************************************",
+                  "FirstCause": true,
+                  "Highlighted": "aws_secret_access_key=****************************************",
+                  "IsCause": true,
+                  "LastCause": true,
+                  "Number": 6,
+                  "Truncated": false
+                },
+                {
+                  "Annotation": "",
+                  "Content": "",
+                  "FirstCause": false,
+                  "IsCause": false,
+                  "LastCause": false,
+                  "Number": 7,
+                  "Truncated": false
+                }
+              ]
+            },
+            "EndLine": 6,
+            "Layer": {},
+            "Match": "aws_secret_access_key=****************************************",
+            "RuleID": "aws-secret-access-key",
+            "Severity": "CRITICAL",
+            "StartLine": 6,
+            "Title": "AWS Secret Access Key"
+          }
+        ],
+        "Target": "aws-credentials.txt"
+      },
+      {
+        "Class": "secret",
+        "Secrets": [
+          {
+            "Category": "AsymmetricPrivateKey",
+            "Code": {
+              "Lines": [
+                {
+                  "Annotation": "",
+                  "Content": "-----BEGIN RSA PRIVATE KEY-----******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END RSA PRIVATE KEY-----",
+                  "FirstCause": true,
+                  "Highlighted": "-----BEGIN RSA PRIVATE KEY-----******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END RSA PRIVATE KEY-----",
+                  "IsCause": true,
+                  "LastCause": true,
+                  "Number": 1,
+                  "Truncated": false
+                },
+                {
+                  "Annotation": "",
+                  "Content": "",
+                  "FirstCause": false,
+                  "IsCause": false,
+                  "LastCause": false,
+                  "Number": 2,
+                  "Truncated": false
+                }
+              ]
+            },
+            "EndLine": 1,
+            "Layer": {},
+            "Match": "----BEGIN RSA PRIVATE KEY-----******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END RSA PRIVATE",
+            "RuleID": "private-key",
+            "Severity": "HIGH",
+            "StartLine": 1,
+            "Title": "Asymmetric Private Key"
+          }
+        ],
+        "Target": "id_rsa"
+      }
+    ],
+    "SchemaVersion": 2
+  },
+  "configs": {
+    "ArtifactName": "insecure-test",
+    "ArtifactType": "filesystem",
+    "Metadata": {
+      "ImageConfig": {
+        "architecture": "",
+        "config": {},
+        "created": "0001-01-01T00:00:00Z",
+        "os": "",
+        "rootfs": {
+          "diff_ids": null,
+          "type": ""
+        }
+      }
+    },
+    "Results": [
+      {
+        "Class": "config",
+        "MisconfSummary": {
+          "Exceptions": 0,
+          "Failures": 2,
+          "Successes": 20
+        },
+        "Misconfigurations": [
+          {
+            "AVDID": "AVD-DS-0001",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "FROM juliantotzek/verademo1-tomcat",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 1,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 1,
+              "Provider": "Dockerfile",
+              "Service": "general",
+              "StartLine": 1
+            },
+            "Description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.",
+            "ID": "DS001",
+            "Layer": {},
+            "Message": "Specify a tag in the 'FROM' statement for image 'juliantotzek/verademo1-tomcat'",
+            "Namespace": "builtin.dockerfile.DS001",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ds001",
+            "Query": "data.builtin.dockerfile.DS001.deny",
+            "References": [
+              "https://avd.aquasec.com/misconfig/ds001"
+            ],
+            "Resolution": "Add a tag to the image in the 'FROM' statement",
+            "Severity": "MEDIUM",
+            "Status": "FAIL",
+            "Title": "':latest' tag used",
+            "Type": "Dockerfile Security Check"
+          },
+          {
+            "AVDID": "AVD-DS-0002",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": null
+              },
+              "Provider": "Dockerfile",
+              "Service": "general"
+            },
+            "Description": "Running containers with 'root' user can lead to a container escape situation. It is a best practice to run containers as non-root users, which can be done by adding a 'USER' statement to the Dockerfile.",
+            "ID": "DS002",
+            "Layer": {},
+            "Message": "Specify at least 1 USER command in Dockerfile with non-root user as argument",
+            "Namespace": "builtin.dockerfile.DS002",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ds002",
+            "Query": "data.builtin.dockerfile.DS002.deny",
+            "References": [
+              "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/",
+              "https://avd.aquasec.com/misconfig/ds002"
+            ],
+            "Resolution": "Add 'USER \u003cnon root user name\u003e' line to the Dockerfile",
+            "Severity": "HIGH",
+            "Status": "FAIL",
+            "Title": "Image user should not be 'root'",
+            "Type": "Dockerfile Security Check"
+          }
+        ],
+        "Target": "Dockerfile",
+        "Type": "dockerfile"
+      },
+      {
+        "Class": "config",
+        "MisconfSummary": {
+          "Exceptions": 0,
+          "Failures": 17,
+          "Successes": 62
+        },
+        "Misconfigurations": [
+          {
+            "AVDID": "AVD-KSV-0001",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "A program inside the container can elevate its own privileges and run as root, which might give the program control over the container and node.",
+            "ID": "KSV001",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should set 'securityContext.allowPrivilegeEscalation' to false",
+            "Namespace": "builtin.kubernetes.KSV001",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv001",
+            "Query": "data.builtin.kubernetes.KSV001.deny",
+            "References": [
+              "https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted",
+              "https://avd.aquasec.com/misconfig/ksv001"
+            ],
+            "Resolution": "Set 'set containers[].securityContext.allowPrivilegeEscalation' to 'false'.",
+            "Severity": "MEDIUM",
+            "Status": "FAIL",
+            "Title": "Process can elevate its own privileges",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0003",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "The container should drop all default capabilities and add only those that are needed for its execution.",
+            "ID": "KSV003",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should add 'ALL' to 'securityContext.capabilities.drop'",
+            "Namespace": "builtin.kubernetes.KSV003",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv003",
+            "Query": "data.builtin.kubernetes.KSV003.deny",
+            "References": [
+              "https://kubesec.io/basics/containers-securitycontext-capabilities-drop-index-all/",
+              "https://avd.aquasec.com/misconfig/ksv003"
+            ],
+            "Resolution": "Add 'ALL' to containers[].securityContext.capabilities.drop.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "Default capabilities not dropped",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0006",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "  hostIPC: true  ",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 6,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  securityContext:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 7,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "    seLinuxOptions:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 8,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      type: custom",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 9,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  containers:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 10,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 13,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  volumes:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 14,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "",
+                    "FirstCause": false,
+                    "IsCause": false,
+                    "LastCause": false,
+                    "Number": 15,
+                    "Truncated": true
+                  }
+                ]
+              },
+              "EndLine": 18,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 6
+            },
+            "Description": "Mounting docker.sock from the host can give the container full root access to the host.",
+            "ID": "KSV006",
+            "Layer": {},
+            "Message": "Pod 'hello' should not specify '/var/run/docker.socker' in 'spec.template.volumes.hostPath.path'",
+            "Namespace": "builtin.kubernetes.KSV006",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv006",
+            "Query": "data.builtin.kubernetes.KSV006.deny",
+            "References": [
+              "https://kubesec.io/basics/spec-volumes-hostpath-path-var-run-docker-sock/",
+              "https://avd.aquasec.com/misconfig/ksv006"
+            ],
+            "Resolution": "Do not specify /var/run/docker.socket in 'spec.template.volumes.hostPath.path'.",
+            "Severity": "HIGH",
+            "Status": "FAIL",
+            "Title": "hostPath volume mounted with docker.sock",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0008",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "  hostIPC: true  ",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 6,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  securityContext:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 7,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "    seLinuxOptions:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 8,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      type: custom",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 9,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  containers:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 10,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 13,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  volumes:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 14,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "",
+                    "FirstCause": false,
+                    "IsCause": false,
+                    "LastCause": false,
+                    "Number": 15,
+                    "Truncated": true
+                  }
+                ]
+              },
+              "EndLine": 18,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 6
+            },
+            "Description": "Sharing the host’s IPC namespace allows container processes to communicate with processes on the host.",
+            "ID": "KSV008",
+            "Layer": {},
+            "Message": "Pod 'hello' should not set 'spec.template.spec.hostIPC' to true",
+            "Namespace": "builtin.kubernetes.KSV008",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv008",
+            "Query": "data.builtin.kubernetes.KSV008.deny",
+            "References": [
+              "https://kubernetes.io/docs/concepts/security/pod-security-standards/#baseline",
+              "https://avd.aquasec.com/misconfig/ksv008"
+            ],
+            "Resolution": "Do not set 'spec.template.spec.hostIPC' to true.",
+            "Severity": "HIGH",
+            "Status": "FAIL",
+            "Title": "Access to host IPC namespace",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0011",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "Enforcing CPU limits prevents DoS via resource exhaustion.",
+            "ID": "KSV011",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should set 'resources.limits.cpu'",
+            "Namespace": "builtin.kubernetes.KSV011",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv011",
+            "Query": "data.builtin.kubernetes.KSV011.deny",
+            "References": [
+              "https://cloud.google.com/blog/products/containers-kubernetes/kubernetes-best-practices-resource-requests-and-limits",
+              "https://avd.aquasec.com/misconfig/ksv011"
+            ],
+            "Resolution": "Set a limit value under 'containers[].resources.limits.cpu'.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "CPU not limited",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0012",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "'runAsNonRoot' forces the running image to run as a non-root user to ensure least privileges.",
+            "ID": "KSV012",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should set 'securityContext.runAsNonRoot' to true",
+            "Namespace": "builtin.kubernetes.KSV012",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv012",
+            "Query": "data.builtin.kubernetes.KSV012.deny",
+            "References": [
+              "https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted",
+              "https://avd.aquasec.com/misconfig/ksv012"
+            ],
+            "Resolution": "Set 'containers[].securityContext.runAsNonRoot' to true.",
+            "Severity": "MEDIUM",
+            "Status": "FAIL",
+            "Title": "Runs as root user",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0013",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "It is best to avoid using the ':latest' image tag when deploying containers in production. Doing so makes it hard to track which version of the image is running, and hard to roll back the version.",
+            "ID": "KSV013",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should specify an image tag",
+            "Namespace": "builtin.kubernetes.KSV013",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv013",
+            "Query": "data.builtin.kubernetes.KSV013.deny",
+            "References": [
+              "https://kubernetes.io/docs/concepts/configuration/overview/#container-images",
+              "https://avd.aquasec.com/misconfig/ksv013"
+            ],
+            "Resolution": "Use a specific container image tag that is not 'latest'.",
+            "Severity": "MEDIUM",
+            "Status": "FAIL",
+            "Title": "Image tag ':latest' used",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0014",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "An immutable root file system prevents applications from writing to their local disk. This can limit intrusions, as attackers will not be able to tamper with the file system or write foreign executables to disk.",
+            "ID": "KSV014",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should set 'securityContext.readOnlyRootFilesystem' to true",
+            "Namespace": "builtin.kubernetes.KSV014",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv014",
+            "Query": "data.builtin.kubernetes.KSV014.deny",
+            "References": [
+              "https://kubesec.io/basics/containers-securitycontext-readonlyrootfilesystem-true/",
+              "https://avd.aquasec.com/misconfig/ksv014"
+            ],
+            "Resolution": "Change 'containers[].securityContext.readOnlyRootFilesystem' to 'true'.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "Root file system is not read-only",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0015",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "When containers have resource requests specified, the scheduler can make better decisions about which nodes to place pods on, and how to deal with resource contention.",
+            "ID": "KSV015",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should set 'resources.requests.cpu'",
+            "Namespace": "builtin.kubernetes.KSV015",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv015",
+            "Query": "data.builtin.kubernetes.KSV015.deny",
+            "References": [
+              "https://cloud.google.com/blog/products/containers-kubernetes/kubernetes-best-practices-resource-requests-and-limits",
+              "https://avd.aquasec.com/misconfig/ksv015"
+            ],
+            "Resolution": "Set 'containers[].resources.requests.cpu'.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "CPU requests not specified",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0016",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "When containers have memory requests specified, the scheduler can make better decisions about which nodes to place pods on, and how to deal with resource contention.",
+            "ID": "KSV016",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should set 'resources.requests.memory'",
+            "Namespace": "builtin.kubernetes.KSV016",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv016",
+            "Query": "data.builtin.kubernetes.KSV016.deny",
+            "References": [
+              "https://kubesec.io/basics/containers-resources-limits-memory/",
+              "https://avd.aquasec.com/misconfig/ksv016"
+            ],
+            "Resolution": "Set 'containers[].resources.requests.memory'.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "Memory requests not specified",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0018",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "Enforcing memory limits prevents DoS via resource exhaustion.",
+            "ID": "KSV018",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should set 'resources.limits.memory'",
+            "Namespace": "builtin.kubernetes.KSV018",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv018",
+            "Query": "data.builtin.kubernetes.KSV018.deny",
+            "References": [
+              "https://kubesec.io/basics/containers-resources-limits-memory/",
+              "https://avd.aquasec.com/misconfig/ksv018"
+            ],
+            "Resolution": "Set a limit value under 'containers[].resources.limits.memory'.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "Memory not limited",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0020",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "Force the container to run with user ID \u003e 10000 to avoid conflicts with the host’s user table.",
+            "ID": "KSV020",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should set 'securityContext.runAsUser' \u003e 10000",
+            "Namespace": "builtin.kubernetes.KSV020",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv020",
+            "Query": "data.builtin.kubernetes.KSV020.deny",
+            "References": [
+              "https://kubesec.io/basics/containers-securitycontext-runasuser/",
+              "https://avd.aquasec.com/misconfig/ksv020"
+            ],
+            "Resolution": "Set 'containers[].securityContext.runAsUser' to an integer \u003e 10000.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "Runs with low user ID",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0021",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "Force the container to run with group ID \u003e 10000 to avoid conflicts with the host’s user table.",
+            "ID": "KSV021",
+            "Layer": {},
+            "Message": "Container 'hello' of Pod 'hello' should set 'securityContext.runAsGroup' \u003e 10000",
+            "Namespace": "builtin.kubernetes.KSV021",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv021",
+            "Query": "data.builtin.kubernetes.KSV021.deny",
+            "References": [
+              "https://kubesec.io/basics/containers-securitycontext-runasuser/",
+              "https://avd.aquasec.com/misconfig/ksv021"
+            ],
+            "Resolution": "Set 'containers[].securityContext.runAsGroup' to an integer \u003e 10000.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "Runs with low group ID",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0023",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "  hostIPC: true  ",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 6,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  securityContext:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 7,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "    seLinuxOptions:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 8,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      type: custom",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 9,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  containers:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 10,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 13,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  volumes:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 14,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "",
+                    "FirstCause": false,
+                    "IsCause": false,
+                    "LastCause": false,
+                    "Number": 15,
+                    "Truncated": true
+                  }
+                ]
+              },
+              "EndLine": 18,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 6
+            },
+            "Description": "HostPath volumes must be forbidden.",
+            "ID": "KSV023",
+            "Layer": {},
+            "Message": "Pod 'hello' should not set 'spec.template.volumes.hostPath'",
+            "Namespace": "builtin.kubernetes.KSV023",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv023",
+            "Query": "data.builtin.kubernetes.KSV023.deny",
+            "References": [
+              "https://kubernetes.io/docs/concepts/security/pod-security-standards/#baseline",
+              "https://avd.aquasec.com/misconfig/ksv023"
+            ],
+            "Resolution": "Do not set 'spec.volumes[*].hostPath'.",
+            "Severity": "MEDIUM",
+            "Status": "FAIL",
+            "Title": "hostPath volumes mounted",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0025",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "  hostIPC: true  ",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 6,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  securityContext:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 7,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "    seLinuxOptions:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 8,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      type: custom",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 9,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  containers:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 10,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 13,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "  volumes:",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 14,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "",
+                    "FirstCause": false,
+                    "IsCause": false,
+                    "LastCause": false,
+                    "Number": 15,
+                    "Truncated": true
+                  }
+                ]
+              },
+              "EndLine": 18,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 6
+            },
+            "Description": "Setting a custom SELinux user or role option should be forbidden.",
+            "ID": "KSV025",
+            "Layer": {},
+            "Message": "Pod 'hello' uses invalid seLinux type 'custom'",
+            "Namespace": "builtin.kubernetes.KSV025",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv025",
+            "Query": "data.builtin.kubernetes.KSV025.deny",
+            "References": [
+              "https://kubernetes.io/docs/concepts/security/pod-security-standards/#baseline",
+              "https://avd.aquasec.com/misconfig/ksv025"
+            ],
+            "Resolution": "Do not set 'spec.securityContext.seLinuxOptions', spec.containers[*].securityContext.seLinuxOptions and spec.initContainers[*].securityContext.seLinuxOptions.",
+            "Severity": "MEDIUM",
+            "Status": "FAIL",
+            "Title": "SELinux custom options set",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0030",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "The RuntimeDefault/Localhost seccomp profile must be required, or allow specific additional profiles.",
+            "ID": "KSV030",
+            "Layer": {},
+            "Message": "Either Pod or Container should set 'securityContext.seccompProfile.type' to 'RuntimeDefault'",
+            "Namespace": "builtin.kubernetes.KSV030",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv030",
+            "Query": "data.builtin.kubernetes.KSV030.deny",
+            "References": [
+              "https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted",
+              "https://avd.aquasec.com/misconfig/ksv030"
+            ],
+            "Resolution": "Set 'spec.securityContext.seccompProfile.type', 'spec.containers[*].securityContext.seccompProfile' and 'spec.initContainers[*].securityContext.seccompProfile' to 'RuntimeDefault' or undefined.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "Default Seccomp profile not set",
+            "Type": "Kubernetes Security Check"
+          },
+          {
+            "AVDID": "AVD-KSV-0106",
+            "CauseMetadata": {
+              "Code": {
+                "Lines": [
+                  {
+                    "Annotation": "",
+                    "Content": "    - command: [\"sh\", \"-c\", \"echo 'Hello' \u0026\u0026 sleep 1h\"]",
+                    "FirstCause": true,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 11,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      image: busybox:latest",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": false,
+                    "Number": 12,
+                    "Truncated": false
+                  },
+                  {
+                    "Annotation": "",
+                    "Content": "      name: hello",
+                    "FirstCause": false,
+                    "IsCause": true,
+                    "LastCause": true,
+                    "Number": 13,
+                    "Truncated": false
+                  }
+                ]
+              },
+              "EndLine": 13,
+              "Provider": "Kubernetes",
+              "Service": "general",
+              "StartLine": 11
+            },
+            "Description": "Containers must drop ALL capabilities, and are only permitted to add back the NET_BIND_SERVICE capability.",
+            "ID": "KSV106",
+            "Layer": {},
+            "Message": "container should drop all",
+            "Namespace": "builtin.kubernetes.KSV106",
+            "PrimaryURL": "https://avd.aquasec.com/misconfig/ksv106",
+            "Query": "data.builtin.kubernetes.KSV106.deny",
+            "References": [
+              "https://kubernetes.io/docs/concepts/security/pod-security-standards/#restricted",
+              "https://avd.aquasec.com/misconfig/ksv106"
+            ],
+            "Resolution": "Set 'spec.containers[*].securityContext.capabilities.drop' to 'ALL' and only add 'NET_BIND_SERVICE' to 'spec.containers[*].securityContext.capabilities.add'.",
+            "Severity": "LOW",
+            "Status": "FAIL",
+            "Title": "Container capabilities must only include NET_BIND_SERVICE",
+            "Type": "Kubernetes Security Check"
+          }
+        ],
+        "Target": "insecure.yaml",
+        "Type": "kubernetes"
+      }
+    ],
+    "SchemaVersion": 2
+  },
+  "policy-results": [
+    {
+      "filename": "root",
+      "namespace": "main",
+      "successes": 0,
+      "failures": [
+        {
+          "msg": "config.rego failed - Found HIGH issues in infrastructure as code: Dockerfile: Image user should not be 'root'"
+        },
+        {
+          "msg": "config.rego failed - Found HIGH issues in infrastructure as code: insecure.yaml: Access to host IPC namespace"
+        },
+        {
+          "msg": "config.rego failed - Found HIGH issues in infrastructure as code: insecure.yaml: hostPath volume mounted with docker.sock"
+        },
+        {
+          "msg": "secret.rego failed - Found CRITICAL secret: aws-credentials.txt: AWS Access Key ID"
+        },
+        {
+          "msg": "secret.rego failed - Found CRITICAL secret: aws-credentials.txt: AWS Secret Access Key"
+        },
+        {
+          "msg": "secret.rego failed - Found HIGH secret: id_rsa: Asymmetric Private Key"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found Critical software vulnerability: GHSA-2qrg-x229-3v8q"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found Critical software vulnerability: GHSA-65fg-84f6-3jq3"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found Critical software vulnerability: GHSA-f7vh-qwp3-x37m"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found Critical software vulnerability: GHSA-hmr4-m2h5-33qx"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found Critical software vulnerability: GHSA-vfq6-hq5r-27r6"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found High software vulnerability: GHSA-3gh2-xw74-jmcw"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found High software vulnerability: GHSA-4pc7-vqv5-5r3v"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found High software vulnerability: GHSA-74fj-2j2h-c42q"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found High software vulnerability: GHSA-cph5-m8f7-6c5x"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found High software vulnerability: GHSA-fp5r-v3w9-4333"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found High software vulnerability: GHSA-pghf-347x-c2gj"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found High software vulnerability: GHSA-v6rh-hp5x-86rv"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found High software vulnerability: GHSA-w9p3-5cr8-m3jj"
+        },
+        {
+          "msg": "vulnerability.rego failed - Found High software vulnerability: GHSA-wh4h-v3f2-r2pp"
+        }
+      ]
+    }
+  ],
+  "policy-passed": false
+}

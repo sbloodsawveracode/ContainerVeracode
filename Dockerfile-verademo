@@ -1,0 +1,4 @@
+FROM local/c7-systemd
+
+RUN yum -y install tomcat mysql-server git; yum clean all; systemctl enable tomcat.service, systemctl enable mysql.service
+CMD ["/usr/sbin/init"]

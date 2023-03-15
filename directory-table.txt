@@ -1,0 +1,79 @@
+Vulnerabilities
+NAME                  INSTALLED    FIXED-IN  TYPE          VULNERABILITY        SEVERITY 
+Django                1.9.6        1.9.13    python        GHSA-37hp-765x-j95x  Medium    
+Django                1.9.6        1.11.27   python        GHSA-vfq6-hq5r-27r6  Critical  
+Django                1.9.6        1.11.29   python        GHSA-3gh2-xw74-jmcw  High      
+Django                1.9.6        2.2.24    python        GHSA-68w8-qjq3-2gfm  Medium    
+Django                1.9.6        1.9.13    python        GHSA-h4hv-m4h4-mhwg  Medium    
+Django                1.9.6        1.11.18   python        GHSA-337x-4q8g-prc5  Medium    
+Django                1.9.6        1.11.28   python        GHSA-hmr4-m2h5-33qx  Critical  
+Django                1.9.6        2.2.25    python        GHSA-v6rh-hp5x-86rv  High      
+Django                1.9.6        1.11.19   python        GHSA-wh4h-v3f2-r2pp  High      
+axios                 0.21.1       0.21.2    npm           GHSA-cph5-m8f7-6c5x  High      
+django-debug-toolbar  1.4          1.11.1    python        GHSA-pghf-347x-c2gj  High      
+follow-redirects      1.13.3       1.14.8    npm           GHSA-pw2r-vq6v-hr8c  Medium    
+follow-redirects      1.13.3       1.14.7    npm           GHSA-74fj-2j2h-c42q  High      
+keycloak-saml-core    1.8.1.Final  18.0.0    java-archive  GHSA-4pc7-vqv5-5r3v  High      
+log4j                 1.2.17                 java-archive  GHSA-2qrg-x229-3v8q  Critical  
+log4j                 1.2.17                 java-archive  GHSA-65fg-84f6-3jq3  Critical  
+log4j                 1.2.17                 java-archive  GHSA-f7vh-qwp3-x37m  Critical  
+log4j                 1.2.17                 java-archive  GHSA-fp5r-v3w9-4333  High      
+log4j                 1.2.17                 java-archive  GHSA-w9p3-5cr8-m3jj  High      
+
+Misconfigurations
+TITLE                                                    	PROVIDER  	ID    	SEVERITY 
+':latest' tag used                                       	Dockerfile	DS001 	MEDIUM  	
+Image user should not be 'root'                          	Dockerfile	DS002 	HIGH    	
+Process can elevate its own privileges                   	Kubernetes	KSV001	MEDIUM  	
+Default capabilities not dropped                         	Kubernetes	KSV003	LOW     	
+hostPath volume mounted with docker.sock                 	Kubernetes	KSV006	HIGH    	
+Access to host IPC namespace                             	Kubernetes	KSV008	HIGH    	
+CPU not limited                                          	Kubernetes	KSV011	LOW     	
+Runs as root user                                        	Kubernetes	KSV012	MEDIUM  	
+Image tag ':latest' used                                 	Kubernetes	KSV013	MEDIUM  	
+Root file system is not read-only                        	Kubernetes	KSV014	LOW     	
+CPU requests not specified                               	Kubernetes	KSV015	LOW     	
+Memory requests not specified                            	Kubernetes	KSV016	LOW     	
+Memory not limited                                       	Kubernetes	KSV018	LOW     	
+Runs with low user ID                                    	Kubernetes	KSV020	LOW     	
+Runs with low group ID                                   	Kubernetes	KSV021	LOW     	
+hostPath volumes mounted                                 	Kubernetes	KSV023	MEDIUM  	
+SELinux custom options set                               	Kubernetes	KSV025	MEDIUM  	
+Default Seccomp profile not set                          	Kubernetes	KSV030	LOW     	
+Container capabilities must only include NET_BIND_SERVICE	Kubernetes	KSV106	LOW     	
+
+
+Secrets
+FILE               	SECRET TYPE           	SEVERITY 
+aws-credentials.txt	AWS Access Key ID     	CRITICAL	
+aws-credentials.txt	AWS Secret Access Key 	CRITICAL	
+id_rsa             	Asymmetric Private Key	HIGH    	
+
+
+Policy Results
+TYPE         	MESSAGE                                                                        
+Config       	Found HIGH issues in infrastructure as code: Dockerfile: Image user should not	
+             	be 'root'                                                                     	
+Config       	Found HIGH issues in infrastructure as code: insecure.yaml: Access to host IPC	
+             	namespace                                                                     	
+Config       	Found HIGH issues in infrastructure as code: insecure.yaml: hostPath volume   	
+             	mounted with docker.sock                                                      	
+Secret       	Found CRITICAL secret: aws-credentials.txt: AWS Access Key ID                 	
+Secret       	Found CRITICAL secret: aws-credentials.txt: AWS Secret Access Key             	
+Secret       	Found HIGH secret: id_rsa: Asymmetric Private Key                             	
+Vulnerability	Found Critical software vulnerability: GHSA-2qrg-x229-3v8q                    	
+Vulnerability	Found Critical software vulnerability: GHSA-65fg-84f6-3jq3                    	
+Vulnerability	Found Critical software vulnerability: GHSA-f7vh-qwp3-x37m                    	
+Vulnerability	Found Critical software vulnerability: GHSA-hmr4-m2h5-33qx                    	
+Vulnerability	Found Critical software vulnerability: GHSA-vfq6-hq5r-27r6                    	
+Vulnerability	Found High software vulnerability: GHSA-3gh2-xw74-jmcw                        	
+Vulnerability	Found High software vulnerability: GHSA-4pc7-vqv5-5r3v                        	
+Vulnerability	Found High software vulnerability: GHSA-74fj-2j2h-c42q                        	
+Vulnerability	Found High software vulnerability: GHSA-cph5-m8f7-6c5x                        	
+Vulnerability	Found High software vulnerability: GHSA-fp5r-v3w9-4333                        	
+Vulnerability	Found High software vulnerability: GHSA-pghf-347x-c2gj                        	
+Vulnerability	Found High software vulnerability: GHSA-v6rh-hp5x-86rv                        	
+Vulnerability	Found High software vulnerability: GHSA-w9p3-5cr8-m3jj                        	
+Vulnerability	Found High software vulnerability: GHSA-wh4h-v3f2-r2pp                        	
+
+Policy Passed = false
